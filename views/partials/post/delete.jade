@@ -1,0 +1,7 @@
+h2 {{post.title}}
+div: p {{post.text}}
+p
+    | Are you sure you want to delete this post? 
+    button(ng-click='postDelete()', class='btn') yeap
+    |  - 
+    button(ng-click='home()', class='btn') noupe 

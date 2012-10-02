@@ -1,0 +1,7 @@
+h2 Edit post
+label(for='title') Title:
+input(ng-model='form.title', name='title', type='text') {{ form.title }}
+p Body:
+textarea(ng-model='form.text', cols='50', rows='15', name='text')
+p
+    button(ng-click='postEdit()', class='btn') Save changes

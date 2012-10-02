@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    section
+        header: div.container
+            h1= title
+            ul
+                li: a(href='/') Home
+                li: a(href='/post/new') Create new post
+        hr
+
+        div(class='container', ng-view) 
