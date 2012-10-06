@@ -30,8 +30,13 @@ var EditPostController = function EditPostController ( $scope, $http, $location,
     };    
 
     $scope.post = {};
+    $scope.form = {};
     $http.get('/api/post/read/' + post.id).success(function ( data ) {
-        $scope.post = data.post;    
+        $scope.post = data.post;
+        $scope.form = {
+            title: $scope.post.title,
+            text: $scope.post.text
+        }
     });
 
     $scope.postEdit = function () {
